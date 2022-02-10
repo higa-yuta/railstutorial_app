@@ -1,9 +1,9 @@
 # README
 
-##Ruby version
+## Ruby version
   ruby 2.7.5
 
-##Ruby on Rails version
+## Ruby on Rails version
   Rails 7.0.2
 
 * System dependencies

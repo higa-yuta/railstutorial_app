@@ -11,18 +11,30 @@ module RailstutorialApp
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
-    initializer(:remove_action_mailbox_and_activestorage_and_torbo_routes, after: :add_routing_paths) { |app|
+    # add_routing_pathsはconfig/routes.rbファイルを読み込みルーティングをセットアップする
+    initializer(:remove_action_mailbox_and_activestorage_and_turbo_routes, after: :add_routing_paths) { |app|
       app.routes_reloader.paths.delete_if {|path| path =~ /activestorage/ }
       app.routes_reloader.paths.delete_if {|path| path =~ /actionmailbox/ }
       app.routes_reloader.paths.delete_if {|path| path =~ /turbo/ }
     }
 
-    # Configuration for the application, engines, and railties goes here.
-    #
-    # These settings can be overridden in specific environments using the files
-    # in config/environments, which are processed later.
-    #
-    # config.time_zone = "Central Time (US & Canada)"
-    # config.eager_load_paths << Rails.root.join("extras")
+    # app.routes_relaoder
+    # @paths=
+    # ["/home/vagrant/workspace/railstutorial_app/config/routes.rb",
+    # "/home/vagrant/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/turbo-rails-1.0.1/config/routes.rb",
+    # "/home/vagrant/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/actionmailbox-7.0.2/config/routes.rb",
+    # "/home/vagrant/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activestorage-7.0.2/config/routes.rb"],
+
+
+    # def routes_reloader
+    #   @routes_reloader ||= RoutesReloader.new
+    # end
+
+    # RoutesReloader.new
+    # def initialize
+    #   @paths = []
+    #   @routes_sets = []
+    #   @eager_load = []
+    # end
   end
 end

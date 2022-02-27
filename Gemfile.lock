@@ -153,6 +153,9 @@ GEM
       ruby-progressbar
     msgpack (1.4.4)
     nenv (0.3.0)
+    net-http (0.2.0)
+      net-protocol
+      uri
     net-imap (0.2.3)
       digest
       net-protocol
@@ -263,6 +266,7 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
+    uri (0.11.0)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -296,6 +300,7 @@ DEPENDENCIES
   listen
   minitest (= 5.11.3)
   minitest-reporters (= 1.3.8)
+  net-http
   pg (= 1.1.4)
   pry-rails
   puma (~> 5.0)

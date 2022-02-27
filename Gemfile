@@ -27,6 +27,7 @@ group :development, :test do
   gem "byebug", platforms: %i[ mri mingw x64_mingw ]
   gem "sqlite3", "~> 1.4"
   gem "pry-rails"
+  gem "net-http"
 end
 
 group :development do

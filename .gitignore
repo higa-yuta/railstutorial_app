@@ -69,3 +69,6 @@ yarn-debug.log*
 /storage/*
 !/storage/.keep
 /public/uploads
+
+# Ignore ubunt file
+ubuntu-xenial-16.04-cloudimg-console.log

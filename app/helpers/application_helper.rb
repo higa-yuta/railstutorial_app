@@ -1,7 +1,12 @@
 module ApplicationHelper
 
-  def install_title(page_title)
-    "#{page_title} | Ruby on Rails Tutorial Sample App"
+  def install_title(page_title = "")
+    base_title = "| Ruby on Rails Tutorial Sample App"
+    if page_title.empty?
+      "#{base_title}"
+    else
+      "#{page_title} #{base_title}"
+    end
   end
 
 end

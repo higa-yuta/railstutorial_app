@@ -5,6 +5,7 @@ ruby "2.7.5"
 
 gem "rails", "~> 7.0.1"
 # gem "sprockets-rails"
+gem "bootstrap-sass"
 gem "puma", "~> 5.0"
 gem "importmap-rails"
 gem "turbo-rails"

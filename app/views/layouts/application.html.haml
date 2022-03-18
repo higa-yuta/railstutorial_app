@@ -11,10 +11,9 @@
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_importmap_tags
 
-    -# <!--[if lt IE 9]>
-    -#   <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
-    -#   </script>
-    -# <![endif]-->
+    /[if lt IE 9]
+    %script{ type: 'text/javascript', src: 'http://html5shim.googlecode.com/svn/trunk/html5.js' }
+
   %body
     %header(class="navbar navbar-fixed-top navbar-inverse")
       .container

@@ -12,5 +12,9 @@ class ActiveSupport::TestCase
   fixtures :all
   include ApplicationHelper
 
+  def setup
+    @base_title = "Ruby on Rails Tutorial Sample App"
+  end
+
   # Add more helper methods to be used by all tests here...
 end

@@ -236,7 +236,6 @@ GEM
       ffi (~> 1.0)
     regexp_parser (1.8.2)
     ruby-progressbar (1.11.0)
-    ruby_gntp (0.3.4)
     ruby_parser (3.18.1)
       sexp_processor (~> 4.16)
     rubyzip (1.3.0)
@@ -319,7 +318,6 @@ DEPENDENCIES
   puma (~> 5.0)
   rails (~> 7.0.1)
   rails-controller-testing (= 1.0.4)
-  ruby_gntp
   sassc-rails
   selenium-webdriver (= 3.142.4)
   spring (= 2.1.0)

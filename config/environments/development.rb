@@ -64,7 +64,7 @@ Rails.application.configure do
 
   # Set up asset allocation
   # Check ip address(Vagrantfile)
-  config.action_controller.asset_host = "192.168.50.4"
+  # config.action_controller.asset_host = "192.168.50.4"
 
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true

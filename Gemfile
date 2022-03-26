@@ -28,7 +28,7 @@ group :development, :test do
   gem "byebug", platforms: %i[ mri mingw x64_mingw ]
   gem "sqlite3", "~> 1.4"
   gem "pry-rails"
-  gem "pry-byebug"
+  # gem "pry-byebug"
   # https://github.com/ruby/net-imap/issues/16
   gem "net-http"
 end

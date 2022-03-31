@@ -1,6 +1,7 @@
 class User < ApplicationRecord
 
   before_save { email.downcase! }
+  before_validation :remove_space_in_password
 
   validates(:name, presence: true, length: {maximum: 50})
 
@@ -8,4 +9,13 @@ class User < ApplicationRecord
   validates(:email, presence: true, length: {maximum: 255},
             format: { with: VALID_EMAIL_REGEX },
             uniqueness: { case_sensitive: false }) 
+
+  has_secure_password
+  validates(:password, presence: true, length: { minimum: 6 })
+
+
+  def remove_space_in_password
+    self.password.delete("\s　")
+  end
+
 end

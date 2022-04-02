@@ -1,7 +1,6 @@
 class User < ApplicationRecord
 
   before_save { email.downcase! }
-  before_validation :remove_space_in_password
 
   validates(:name, presence: true, length: {maximum: 50})
 

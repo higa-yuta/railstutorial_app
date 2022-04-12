@@ -10,8 +10,13 @@ class User < ApplicationRecord
             uniqueness: { case_sensitive: false }) 
 
   has_secure_password
-  validates(:password, presence: true, length: { minimum: 6 })
+  validates(:password, presence: true, length: { minimum: 6 },
+            allow_nil: true)
 
+
+  # def email=(val)
+  #   self.email = val.downcase!
+  # end
 
   def remove_space_in_password
     self.password.delete("\s　")

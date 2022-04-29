@@ -32,6 +32,10 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     
     follow_redirect!
     assert_template "users/show"
-
+    assert_select ".alert-success"
+    # TODO: 再読込後のflashの有無のテスト
+    get user_path(1)
+    assert_select ".alert-success", count: 0
+    assert_select "h1", "sample"
   end
 end

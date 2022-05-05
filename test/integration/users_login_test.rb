@@ -11,4 +11,11 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     get root_path
     assert flash.empty?
   end
+
+  test "login with valid information" do
+    get login_path
+    post login_path, params: { session: { email: 'okinawa@sample.com',
+                                          password: 'foobar' }}
+    assert_redirected_to "users/show"
+  end
 end

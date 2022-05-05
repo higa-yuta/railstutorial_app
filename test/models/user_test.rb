@@ -77,7 +77,7 @@ class UserTest < ActiveSupport::TestCase
 
   # PASSWORD
 
-  test "passwrod should be valid" do
+  test "password should be valid" do
     @user.password = @user.password_confirmation = "a" * 6
     assert @user.valid?
   end

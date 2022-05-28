@@ -14,6 +14,8 @@ gem "jbuilder"
 gem "bcrypt", "~> 3.1.13"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem 'haml-rails'
+gem 'webpacker'
+gem 'jquery-rails'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
